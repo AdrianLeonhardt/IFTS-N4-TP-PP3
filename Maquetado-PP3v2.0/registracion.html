@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de socio</title>
+    <link rel="stylesheet" href="./css/registracion.css">
+    <script src="./js/JSform.js"> </script>
+
+<body>
+
+    <header>
+        <h1>BIENVENIDO AL CLUB GLORIAS ARGENTINAS</h1>
+    </header>
+
+    <h1>Registro de socio</h1>
+    <div class="formulario">
+        <form action="./php/formsocio.php" method="post">
+            <div class="izq">
+                <label for="Usuario">Usuario </label>
+                <input type="text" placeholder="Usuario" maxlength="20" name="Usuario" id="Usuario">
+            </div>
+            <div class="izq">
+
+                <label for="Contraseña">Contraseña </label>
+                <input type="password" onkeyup="password_length(event);" placeholder="contraseña" maxlength="16"
+                    name="contraseña" id="Contraseña">
+                <div class="bar_container">
+                    <div id="password-length"></div>
+                </div>
+            </div>
+            <div>
+                <label for="Rcontraseña">Repetir contraseña </label>
+                <input type="password" placeholder="Repetir contraseña" maxlength="16" name="contraseña"
+                    id="Rcontraseña">
+            </div>
+            <div class="izq">
+                <label for="Apellido">Apellido </label>
+                <input type="text" placeholder="Apellido" maxlength="10" name="Socio_apellido" id="Apellido">
+                <label for="Nombre"> Nombre </label>
+                <input type="text" placeholder="Nombre" maxlength="10" name="Socio_nombre" id="Nombre">
+            </div>
+
+            <div class="izq">
+                <label for="LNaciomiento">Lugar de Naciomiento </label>
+                <input type="text" placeholder="Lugar de nacimiento" name="Lugar_nacimiento" id="LNaciomiento"
+                    class="largo">
+            </div>
+            <div class="izq">
+                <label for="FNaciomiento">Fecha de nacimiento</label>
+                <input type="date" placeholder="Fecha de nacimiento" name="fecha_nacimiento" id="FNaciomiento">
+
+                <label for="DNI"> DNI </label>
+                <input type="number" placeholder="DNI" name="dni" id="DNI" class="corto" maxlength="8">
+            </div>
+            <div>
+                <label for="Dirección"> Dirección </label>
+                <input type="text" placeholder="Dirección" name="domicilio" id="Dirección" class="largo">
+            </div>
+            <div class="izq">
+                <label for="Provincia"> Provincia </label>
+                <input list="provincia" placeholder="Provincia" name="provincia" id="Provincia">
+                <datalist id="provincia">
+                    <option value="BUENOS AIRES">
+                    <option value="CATAMARCA">
+                    <option value="CHACO">
+                    <option value="CHUBUT">
+                    <option value="CIUDAD AUTONOMA DE Bs As">
+                    <option value="CORDOBA">
+                    <option value="CORRIENTES">
+                    <option value="ENTRE RIOS">
+                    <option value="FORMOSA">
+                    <option value="JUJUY">
+                    <option value="LA PAMPA">
+                    <option value="LA RIOJA">
+                    <option value="MENDOZA">
+                    <option value="MISIONES">
+                    <option value="NEUQUEN">
+                    <option value="RIO NEGRO">
+                    <option value="SALTA">
+                    <option value="SAN LUIS">
+                    <option value="SANTA CRUZ">
+                    <option value="SANTA FE">
+                    <option value="SANTIAGO DEL ESTERO">
+                    <option value="TIERRA DEL FUEGO">
+                </datalist>
+                <label for="Localidad"> Localidad </label>
+                <input type="text" placeholder="Localidad" name="localidad" id="Localidad">
+            </div>
+            <div class="izq">
+                <label for="postal"> Codigo Postal </label>
+                <input type="number" placeholder="Codigo postal" name="cp" maxlength="2" id="postal" class="corto">
+                <label for="Telefono"> Telefono </label>
+                <input type="tel" placeholder="telefono" name="telefono" id="Telefono">
+            </div>
+            <div class="izq">
+                <label for="familiar"> Grupo Familiar </label>
+                <input type="text" placeholder="grupo familiar " name="grupo familiar " id="familiar" >
+                <label for="Foto"> Adj. Foto </label>
+                <input type="file" placeholder="Adjuntar Foto" name="Adjuntar " id="Foto">
+            </div>
+            <div>
+                <label for="Social"> Deporte Inscripto</label>
+                <input type="text" placeholder="Obra Social" name="Obra Social" id="Social">
+            </div>
+            <div class="der">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="autor">
+            <p>Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
